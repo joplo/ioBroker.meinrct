@@ -1,0 +1,109 @@
+{
+    "common": {
+        "name": "meinrct",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "RCT",
+        "titleLang": {
+            "en": "RCT",
+            "de": "RCT",
+            "ru": "РКИ",
+            "pt": "ECR",
+            "nl": "RCT",
+            "fr": "ECR",
+            "it": "RCT",
+            "es": "ECA",
+            "pl": "RCT",
+            "zh-cn": "随机对照试验"
+        },
+        "desc": {
+            "en": "meinrct",
+            "de": "meinrct",
+            "ru": "meinrct",
+            "pt": "meinrct",
+            "nl": "meinrct",
+            "fr": "meinrct",
+            "it": "meinrct",
+            "es": "meinrct",
+            "pl": "meinrct",
+            "zh-cn": "meinrct"
+        },
+        "authors": [
+            "joplo <jpacc@plochis.de>"
+        ],
+        "keywords": [
+            "ioBroker",
+            "template",
+            "Smart Home",
+            "home automation"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "meinrct.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/joplo/ioBroker.meinrct/main/admin/meinrct.png",
+        "readme": "https://github.com/joplo/ioBroker.meinrct/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "iot-systems",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "materialize"
+        },
+        "eraseOnUpload": true,
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.0.0"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
